@@ -1,10 +1,17 @@
 <?php
-declare(strict_types = 1);
-namespace Designpatten\creational\abstractFactory;
 
-class UnixJsonWriter implements JsonWriter{
-    public function writer(array $data):string
+namespace DesignPatterns\Creational\AbstractFactory;
+
+class UnixJsonWriter implements JsonWriter
+{
+    public function write(array $data, bool $formatted): string
     {
-        return json_encode($data);
+        $options = 0;
+
+        if ($formatted) {
+            $options = JSON_PRETTY_PRINT;
+        }
+
+        return json_encode($data, $options);
     }
 }
