@@ -1,39 +1,48 @@
 <?php
-interface Db{
-    public function conn():string;
+
+declare(strict_types=1);
+/**
+ * learn php design patterns
+ * phpsarc@gmail.com
+ */
+interface Db
+{
+    public function conn(): string;
 }
 
-class Mysql implements Db {
+class Mysql implements Db
+{
     public function conn(): string
     {
         return 'conn mysql';
     }
 }
 
-class Sqlite implements Db{
+class Sqlite implements Db
+{
     public function conn(): string
     {
         return 'conn Sqlite';
     }
 }
 
-class simpleFactory{
+class simpleFactory
+{
     public static function creatDb($type): mixed
     {
         $type = strtoupper($type);
-        $conn = match($type){
-            'MYSQL' => function(){return (new Mysql());},
-            'SQLITE' => function(){return (new Sqlite());},
-            default => function(){return null;},
+        $conn = match ($type) {
+            'MYSQL' => function () {return new Mysql(); },
+            'SQLITE' => function () {return new Sqlite(); },
+            default => function () {return null; },
         };
 
         return $conn();
-
     }
 }
 $obj = simpleFactory::creatDb('sqlite');
-if(is_object($obj)){
+if (is_object($obj)) {
     var_dump($obj->conn());
-}else{
+} else {
     throw new \Exception('not found');
 }

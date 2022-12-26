@@ -1,7 +1,10 @@
 <?php
 
 declare(strict_types=1);
-
+/**
+ * learn php design patterns
+ * phpsarc@gmail.com
+ */
 namespace DesignPatterns\Creational\AbstractFactory\Tests;
 
 use DesignPatterns\Creational\AbstractFactory\CsvWriter;
@@ -11,13 +14,17 @@ use DesignPatterns\Creational\AbstractFactory\WinWriterFactory;
 use DesignPatterns\Creational\AbstractFactory\WriterFactory;
 use PHPUnit\Framework\TestCase;
 
+/**
+ * @internal
+ * @coversNothing
+ */
 class AbstractFactoryTest extends TestCase
 {
-    public function provideFactory():array
+    public function provideFactory(): array
     {
         return [
             [new UnixWriterFactory()],
-            [new WinWriterFactory()]
+            [new WinWriterFactory()],
         ];
     }
 
