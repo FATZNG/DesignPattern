@@ -1,21 +1,20 @@
 <?php
 
 declare(strict_types=1);
-/**
- * learn php design patterns
- * phpsarc@gmail.com
- */
+
 namespace DesignPatterns\Creational\Builder;
+
+use DesignPatterns\Creational\Builder\Parts\Vehicle;
 
 interface Builder
 {
-    public function addWheel();
+    public function createVehicle(): void;
 
-    public function addEngine();
+    public function addWheel(): void;
 
-    public function addDoor();
+    public function addEngine(): void;
 
-    public function getVehicle();
+    public function addDoor(): void;
 
-    public function createVehicle();
+    public function getVehicle(): Vehicle;
 }

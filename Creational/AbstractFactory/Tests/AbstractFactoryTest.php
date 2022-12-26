@@ -1,10 +1,7 @@
 <?php
 
 declare(strict_types=1);
-/**
- * learn php design patterns
- * phpsarc@gmail.com
- */
+
 namespace DesignPatterns\Creational\AbstractFactory\Tests;
 
 use DesignPatterns\Creational\AbstractFactory\CsvWriter;

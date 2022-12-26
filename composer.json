@@ -7,6 +7,11 @@
     "autoload": {
 
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Creational\\Builder\\Tests\\": "Creational/Builder/Tests"
+        }
+    },
     "scripts": {
         "cs-fix": "php-cs-fixer fix $1"
       }

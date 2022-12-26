@@ -1,11 +1,6 @@
 <?php
 
 declare(strict_types=1);
-/**
- * learn php design patterns
- * phpsarc@gmail.com
- */
-// 符合开闭原则：对修改封闭，对扩展开放
 // 参找简单工厂模式
 interface db
 {

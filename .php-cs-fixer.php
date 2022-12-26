@@ -1,8 +1,6 @@
 <?php
 
 $header = <<<'EOF'
-learn php design patterns
-phpsarc@gmail.com
 EOF;
 
 return (new PhpCsFixer\Config())
