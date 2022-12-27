@@ -5,14 +5,19 @@
         "friendsofphp/php-cs-fixer": "^3.13"
     },
     "autoload": {
-
+        "psr-4": {
+            "Creational\\AbstractFactory\\": "Creational/"
+        }
     },
     "autoload-dev": {
         "psr-4": {
-            "Creational\\Builder\\Tests\\": "Creational/Builder/Tests"
+            "Creational\\AbstractFactory\\Tests\\": "Creational/AbstractFactory/Tests/",
+            "Creational\\Builder\\Tests\\": "Creational/Builder/Tests/",
+            "Creational\\FactoryMethod\\Tests\\":"Creational/FactoryMethod/Tests/",
+            "Tests\\":"Tests/"
         }
     },
     "scripts": {
         "cs-fix": "php-cs-fixer fix $1"
-      }
+    }
 }
