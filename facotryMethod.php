@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-// 参找简单工厂模式
 interface db
 {
     public function conn();

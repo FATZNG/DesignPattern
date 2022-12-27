@@ -20,7 +20,8 @@ Just like build a vehicle.
 
 ![Builder:uml](../Images/Builder.png)
 
-## 
+## Factory Method
+
 
 ## singalton
 
